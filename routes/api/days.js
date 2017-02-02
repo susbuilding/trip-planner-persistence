@@ -9,7 +9,7 @@ var Day = require('../../models/day');
 router.get('/', function(req,res,next){
     Day.findAll()
     .then(function(alldays){
-        res.json(alldays)
+      res.json(alldays)
     })
 })
 
@@ -28,7 +28,7 @@ router.post('/', function(req,res,next){
     console.log(req.body)
     Day.create(req.body)
     .then(function(newday){
-        res.json(newday)
+        console.log(newday);
     })
     .catch(next)
 })
